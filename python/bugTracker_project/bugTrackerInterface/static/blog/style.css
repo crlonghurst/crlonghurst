@@ -1,0 +1,94 @@
+body {
+  background: #fafafa;
+  color: #3333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+
+.bugListItem{
+  margin-bottom: 20px;
+}
+
+span {
+  color: #1d1d1d
+}
+
+.bg-steel{
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link{
+  color: #1d1d1d;
+}
+
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+table{
+  color: #4A5043;
+}
+
+
+.account-heading{
+  font-size: 2.5rem;
+}
+
+.content-section{
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.site-header .navbar-nav .nav-lin:hover{
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active{
+  font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }

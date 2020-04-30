@@ -1,0 +1,22 @@
+{% extends "bugTrackerInterface/base.html" %}
+
+{% block content%}
+<article class="media content-section">
+    <div class="media-body">
+        <h2>{{bug.application}}</h2>
+        <span>{{bug.addedBy }}
+            {{bug.description}}
+            {{bug.datePosted|date:"d F Y"}}
+            {{bug.assignedTo}}
+            {% if bug.finished %}
+            Yes <input type="checkbox" name="finished" id="finished">
+            {%else%}
+            No
+            {%endif%}
+        </span>
+    </div>
+</article>
+    <button class="btn btn-outline-info"><a href="{% url 'bug-update' bug.id %}">Edit This Bug</a></button>
+    <button class="btn btn-outline-warning"><a href="{% url 'bug-delete' bug.id %}">Delete This Bug</a></button>
+    <button class="btn btn-outline-info"><a href="{% url 'bug-home' %}">Return to Bug list</a></button>
+{% endblock content %}

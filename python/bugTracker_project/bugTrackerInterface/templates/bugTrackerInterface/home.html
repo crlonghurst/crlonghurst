@@ -1,0 +1,20 @@
+{% extends "bugTrackerInterface/base.html" %}
+
+{% block content%}
+    {%for bug in bugs %}
+        <div class="container-* shadow bugListItem">
+            <h2><a href="{% url 'bug-detail' bug.id %}">{{bug.application}}</a></h2>
+            <p class="text-dark">
+                <strong>Short Description of the Bug: </strong>{{bug.snippet}}<br>
+                <strong>Who reported the Bug: </strong>{{bug.addedBy.first_name }}<br>
+                <strong>Date it was found: </strong>{{bug.datePosted|date:"d F Y"}}<br>
+                <strong>Has it been corrected: </strong>
+                {% if bug.finished %}
+                Yes
+                {%else%}
+                No
+                {%endif%}
+            </p>
+        </div>
+    {% endfor %}
+{% endblock content %}

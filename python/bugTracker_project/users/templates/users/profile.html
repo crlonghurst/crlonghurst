@@ -1,0 +1,22 @@
+{% extends "bugTrackerInterface/base.html" %}  
+{% block content %}
+    <h1>Welcome Back {{user.first_name}}!</h1>
+    {% for bug in bugs %} {% if bug.addedBy.first_name == user.first_name %}
+    <div class="container-* shadow bugListItem">
+        <h2><a href="{% url 'bug-detail' bug.id %}">{{bug.application}}</a></h2>
+        <p class="text-dark">
+            <strong>Description of the Bug: </strong>{{bug.description}}<br>
+            <strong>Who reported the Bug: </strong>{{bug.addedBy.first_name }}<br>
+            <strong>Date it was found: </strong>{{bug.datePosted|date:"d F Y"}}<br>
+            <strong>Has it been corrected: </strong>
+            {% if bug.finished %}
+            Yes
+            {%else%}
+            No
+            {%endif%}<hr>
+            <button class="btn btn-outline-info"><a href="{% url 'bug-update' bug.id %}">Edit This Bug</a></button>
+            <button class="btn btn-outline-info"><a href="{% url 'bug-detail' bug.id %}">Details</a></button>
+        </p>
+    </div>
+
+{% endif %} {% endfor %} {% endblock content %}
