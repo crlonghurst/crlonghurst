@@ -15,6 +15,9 @@ li.navi {
   float: left;
 }
 
+
+
+
 li.navi a {
   display: block;
   color: white;
@@ -57,4 +60,8 @@ li.navi a:hover{
   }
   #footerul {
     list-style-type: none;
+  }
+
+  .mugshot{
+    width: 20% !important;
   }
